@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 11: ¡Últimos Ajustes y Verificación Final!</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        details > summary {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 0px; /* Reduced margin */
+            font-weight: bold;
+            list-style: none; /* Hide default arrow */
+            position: relative;
+            outline: none;
+            border-radius: 5px 5px 0 0; /* Rounded top corners */
+        }
+        details > summary::-webkit-details-marker { display: none; } /* Hide default arrow for Chrome/Safari */
+        details > summary::before { /* Custom Arrow */
+            content: '▶';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9em; /* Slightly larger arrow */
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before { /* Custom Arrow when open */
+            transform: translateY(-50%) rotate(90deg);
+        }
+        details .content { /* Content visible by default inside details */
+             display: block;
+             padding: 15px; /* More padding */
+             border: 1px solid #ddd;
+             border-top: none; /* Avoid double border with summary */
+             margin-bottom: 10px;
+             border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px; /* Add some space above the table */
+        }
+        th, td {
+            padding: 12px; /* Slightly more padding */
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top; /* Ensure content aligns at the top */
+        }
+        th {
+            background-color: #f8f8f8; /* Lighter grey background for headers */
+            font-weight: bold;
+        }
+        /* Style for the 'Action' column */
+        td:first-child {
+            width: 50%;
+        }
+        /* Style for the 'Dialogue' column */
+        td:last-child {
+            width: 50%;
+        }
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
+        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+
+
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+        ul, ol {
+            margin-top: 5px; /* Adjust spacing for lists */
+            margin-bottom: 10px;
+            padding-left: 25px; /* Indent lists slightly more */
+        }
+        li {
+            margin-bottom: 8px; /* More space between list items */
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555; font-weight: bold;}
+         hr { border: none; border-top: 1px solid #eee; margin: 8px 0; } /* Subtle separator */
+         .subtitle { font-size: 0.9em; color: #e0e0e0; margin-top: 5px;} /* Subtitle style from example */
+    </style>
+    <script>
+        // Basic script to ensure details elements work consistently if needed,
+        // but modern browsers handle <details> natively.
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 11: ¡Últimos Ajustes y Verificación Final!</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <details id="activity-0" class="activity" open> <!-- Open by default -->
+            <summary>📝 Resumen de Sesión</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Corregir los últimos detalles identificados en la lista de pendientes de la Sesión 10.</li>
+                                <li>Implementar ajustes menores de tiempo, posición, sonido o apariencia.</li>
+                                <li>Realizar una verificación funcional final y completa por todo el equipo para asegurar que las correcciones funcionaron y no introdujeron nuevos errores.</li>
+                                <li>Asegurar que el proyecto esté técnicamente listo y pulido para la entrega.</li>
+                            </ul>
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong> Proyecto Scratch Jr. finalizado, con los últimos ajustes implementados y verificado funcionalmente por el equipo. Listo para el guardado definitivo y la entrega.
+                            <br><br>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                            <br><br>
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. y el proyecto guardado de la Sesión 10.</li>
+                                <li>La lista de pendientes finales creada por cada equipo en la Sesión 10.</li>
+                                <li>Tablero Kanban (opcional para esta fase, o usar tarjetas como "Corregir Bugs Finales", "Verificación Funcional Completa").</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 1: Stand-up de Puesta a Punto -->
+        <details id="activity-1" class="activity">
+            <summary>🔧 Actividad 1: Stand-up de Puesta a Punto ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (3 min): Repasar Lista de Pendientes</strong>
+                            <br>Reunir a los equipos con su proyecto abierto y la lista de pendientes de S10.
+                            <br>Repasar brevemente la lista: ¿Qué ajustes quedaron por hacer?
+                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Iconos: Herramientas 🛠️, Paño de pulir ✨, Check final ✅).
+                            <br><strong>Proyectar Diapositiva 2</strong> (Recordatorio visual de la lista de pendientes creada en S10).
+                        </td>
+                        <td>
+                            "¡Equipo de pulido final! ¡Hoy es el día de los últimos retoques!"
+                            <br><br>
+                            "La sesión pasada hicimos una revisión súper detallada y creamos una pequeña lista de ajustes pendientes. ¡Tengan esa lista a mano!"
+                            <br><br>
+                            "¿Qué cositas quedaron por arreglar? <em>(Mostrar Diapositiva 2, permitir que los equipos repasen su lista rápidamente)</em>."
+                            <br><br>
+                            "¡Perfecto! Hoy nuestra misión es implementar esas correcciones y hacer una última verificación para dejar nuestra aventura ¡impecable! <em>(Mostrar Diapositiva 1)</em>."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Roles y Enfoque</strong>
+                             <br>Confirmar roles (Constructor/a enfocado en implementar, Probador/a en verificar CADA ajuste, Diseñador/a en el resultado final).
+                             <br>Mencionar que las tarjetas relevantes en Kanban serían "Corregir Bugs Finales" y "Verificación Funcional Completa".
+                        </td>
+                        <td>
+                            "¡Roles listos para el sprint final! Constructor/a, ¡precisión máxima en los ajustes! Probador/a, ¡verifica cada cambio uno por uno! Diseñador/a, ¡asegura que el resultado final se vea genial!"
+                            <br><br>
+                            "En nuestro Kanban, hoy nos enfocamos en 'Corregir Bugs Finales' y la 'Verificación Funcional Completa'. ¡Vamos a por ello!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 2: Corrección y Pulido Final -->
+        <details id="activity-2" class="activity">
+            <summary>✨ Actividad 2: Corrección y Pulido Final ⏰ Tiempo: 30 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (15 min): Implementar Correcciones Finales (Constructor/a)</strong>
+                            <br>El **Constructor/a** implementa UNO A UNO los ajustes de la lista de pendientes (S10).
+                            <br>Estos suelen ser pequeños:
+                            <ul>
+                                <li>Ajustar un tiempo de espera (Bloque Naranja 'Wait').</li>
+                                <li>Mover un personaje unos pocos píxeles (arrastrar o bloques de movimiento).</li>
+                                <li>Cambiar un sonido grabado por otro o ajustar volumen (si es posible).</li>
+                                <li>Eliminar bloques redundantes identificados.</li>
+                                <li>Ajustar tamaño ligeramente (bloques Grow/Shrink o editor).</li>
+                            </ul>
+                             <br>El **Diseñador/a** supervisa que el ajuste coincida con lo planeado visualmente.
+                             <br>Mover tarjeta "Corregir Bugs Finales" a "¡Haciendo Ahora!".
+                        </td>
+                        <td>
+                            "¡Constructores, manos a la obra con la lista de pendientes!"
+                            <br><br>
+                            "Vayan punto por punto. Si dice 'Mover árbol', ¡muevan el árbol! Si dice 'Cambiar sonido', ¡cámbienlo! Si hay que ajustar un tiempo de espera, busquen el bloque naranja 'Wait'."
+                            <br><br>
+                            "Son los últimos detalles para que quede perfecto. ¡Concéntrense en hacer cada ajuste con cuidado!"
+                            <br><br>
+                            "Diseñadores, asegúrense de que el resultado se vea como esperaban."
+                            <br><br>
+                            "¡Movemos 'Corregir Bugs Finales' a '¡Haciendo Ahora!' mientras trabajan!"
+                             <br>
+                            <em>(Facilitador circula ofreciendo ayuda técnica específica para cada tipo de ajuste menor).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (10 min): Verificación Específica (Probador/a)</strong>
+                            <br>DESPUÉS de que el Constructor/a implementa CADA ajuste, el **Probador/a** verifica ESPECÍFICAMENTE ese cambio:
+                            <ul>
+                                <li>¿Se movió el objeto al lugar correcto?</li>
+                                <li>¿Suena el nuevo sonido?</li>
+                                <li>¿El bug de clic rápido ya no ocurre?</li>
+                            </ul>
+                             <br>Adicionalmente, verifica brevemente que el ajuste no haya roto nada cercano.
+                             <br>Comunicar inmediatamente si el ajuste funcionó o no.
+                        </td>
+                        <td>
+                            "¡Probadores, atención! Cada vez que el Constructor/a diga '¡Listo!' con un ajuste, ¡es su turno!"
+                            <br><br>
+                            "Verifiquen JUSTO esa corrección. Si movieron el árbol, ¿está ahora donde debe? Si cambiaron un sonido, ¿suena el nuevo? Si arreglaron un bug, ¿ya no pasa?"
+                            <br><br>
+                            "¡Y rápido, miren alrededor! ¿Ese cambio rompió otra cosa sin querer?"
+                            <br><br>
+                            "¡Informen al instante! ¿Funcionó? ¿Sí o no?"
+                             <br>
+                            <em>(Facilitador guía al Probador/a para que sea sistemático, verificando un cambio a la vez).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (5 min): Prueba Funcional Completa Final (Todo el Equipo)</strong>
+                            <br>Una vez corregidos TODOS los puntos de la lista y verificados individualmente, TODO el equipo realiza UNA ÚLTIMA prueba funcional completa.
+                            <br>Juegan la aventura de principio a fin (ambos caminos + sorpresa extra), asegurándose de que todo fluya correctamente.
+                            <br>El **Diseñador/a** da el visto bueno final a la apariencia y flujo.
+                            <br>Mover tarjeta "Verificación Funcional Completa" a "¡Haciendo Ahora!" y luego a "✅ ¡Terminado!". Mover "Corregir Bugs Finales" a "✅ ¡Terminado!".
+                        </td>
+                        <td>
+                            "¡Equipo, parece que hemos corregido todo en la lista! ¡Ahora la prueba de oro!"
+                            <br><br>
+                            "Juntos, jueguen la aventura completa UNA VEZ MÁS. Desde el inicio hasta el final, probando ambos caminos y la sorpresa. ¿Todo funciona perfecto ahora?"
+                            <br><br>
+                            "Diseñador/a, ¿das el visto bueno final al aspecto y la sensación?"
+                            <br><br>
+                            "¡Si todo está OK, movemos 'Verificación Funcional Completa' y 'Corregir Bugs Finales' a '✅ ¡Terminado!' en el Kanban! ¡Este es el momento!"
+                             <br>
+                            <em>(Acompañar esta última prueba y la celebración final en el Kanban).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 3: Cierre Técnico y Pre-Entrega -->
+        <details id="activity-3" class="activity">
+            <summary>💾 Actividad 3: Cierre Técnico y Pre-Entrega ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): ¡Prototipo Avanzado Listo!</strong>
+                            <br>Felicitar al equipo por alcanzar la versión final y pulida.
+                            <br>Resaltar el proceso completo desde el diseño hasta la depuración final.
+                        </td>
+                        <td>
+                            "¡INCREÍBLE TRABAJO, EQUIPO! ¡Su prototipo avanzado está oficialmente LISTO y funcionando!"
+                            <br><br>
+                            "Han pasado por todo el proceso: diseñaron, construyeron, probaron, arreglaron, pulieron... ¡y lo lograron! ¡Pueden estar muy orgullosos de su aventura interactiva!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Guardado Definitivo (¡Fundamental!)</strong>
+                            <br>Guiar EXPLICITAMENTE a los Constructores para realizar el guardado ABSOLUTAMENTE FINAL del proyecto.
+                            <br>Sugerir o asignar un nombre de archivo definitivo y claro (ej. "EquipoAzul_BosqueFeliz_FINAL").
+                            <br>Asegurarse de que TODOS guarden esta versión definitiva.
+                            <br><strong>Proyectar Diapositiva 3</strong> (Icono grande de Guardar + Sello "VERSIÓN FINAL" + Mensaje "¡GUARDA EL PROYECTO DEFINITIVO!").
+                        </td>
+                        <td>
+                            "¡Y ahora, el guardado más importante de todos! ¡El definitivo! ¡La versión que entregaremos!"
+                            <br><br>
+                            "Constructores, asegúrense de guardarlo con un nombre claro, como 'Equipo[SuColor]_AventuraODS_FINAL'. ¡Este es el bueno! <em>(Mostrar Diapositiva 3)</em>."
+                             <br><br>
+                            <em>(Máxima atención del facilitador para verificar este guardado final en todos los equipos).</em> "¿Guardado definitivo? ¡Confirmado!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (1 min): Preparación para Entrega</strong>
+                            <br>Anunciar la Sesión 12: Entrega final del prototipo.
+                            <br>Felicitar una última vez.
+                        </td>
+                        <td>
+                            "¡Su obra maestra está guardada y lista!"
+                            <br><br>
+                            "La próxima sesión, la número 12, será la ¡ENTREGA FINAL! Prepararemos todo para que yo (el profe) pueda ver sus increíbles creaciones."
+                            <br><br>
+                            "¡Lo han hecho espectacular! ¡Felicidades por completar su prototipo avanzado! ¡Nos vemos para la entrega! ¡Adiós!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
