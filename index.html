@@ -74,7 +74,8 @@
             margin-top: 5px;
         }
         /* Ensure step <strong> tags render bold */
-        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+        td strong { font-weight: bold; } /* General strong for keywords */
+        td > strong { display: block; margin-bottom: 5px; } /* For step headers */
 
 
         span[style*="color: red;"] {
@@ -148,10 +149,12 @@
                     <tr>
                         <td>
                             <strong>Paso 1 (3 min): Repasar Lista de Pendientes</strong>
-                            <br>Reunir a los equipos con su proyecto abierto y la lista de pendientes de S10.
-                            <br>Repasar brevemente la lista: ¿Qué ajustes quedaron por hacer?
-                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Iconos: Herramientas 🛠️, Paño de pulir ✨, Check final ✅).
-                            <br><strong>Proyectar Diapositiva 2</strong> (Recordatorio visual de la lista de pendientes creada en S10).
+                            <ul>
+                                <li>Reunir a los equipos con su proyecto abierto y la lista de pendientes de S10.</li>
+                                <li>Repasar brevemente la lista: ¿Qué ajustes quedaron por hacer?</li>
+                                <li><strong>Proyectar Diapositiva 1</strong>.</li>
+                                <li><strong>Proyectar Diapositiva 2</strong>.</li>
+                            </ul>
                         </td>
                         <td>
                             "¡Equipo de pulido final! ¡Hoy es el día de los últimos retoques!"
@@ -166,8 +169,10 @@
                     <tr>
                         <td>
                             <strong>Paso 2 (2 min): Roles y Enfoque</strong>
-                             <br>Confirmar roles (Constructor/a enfocado en implementar, Probador/a en verificar CADA ajuste, Diseñador/a en el resultado final).
-                             <br>Mencionar que las tarjetas relevantes en Kanban serían "Corregir Bugs Finales" y "Verificación Funcional Completa".
+                            <ul>
+                                <li>Confirmar roles (<strong>Constructor/a</strong> enfocado en implementar, <strong>Probador/a</strong> en verificar CADA ajuste, <strong>Diseñador/a</strong> en el resultado final).</li>
+                                <li>Mencionar que las tarjetas relevantes en Kanban serían "Corregir Bugs Finales" y "Verificación Funcional Completa".</li>
+                            </ul>
                         </td>
                         <td>
                             "¡Roles listos para el sprint final! Constructor/a, ¡precisión máxima en los ajustes! Probador/a, ¡verifica cada cambio uno por uno! Diseñador/a, ¡asegura que el resultado final se vea genial!"
@@ -190,18 +195,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1 (15 min): Implementar Correcciones Finales (Constructor/a)</strong>
-                            <br>El **Constructor/a** implementa UNO A UNO los ajustes de la lista de pendientes (S10).
-                            <br>Estos suelen ser pequeños:
+                            <strong>Paso 1 (15 min): Implementar Correcciones Finales (<strong>Constructor/a</strong>)</strong>
                             <ul>
-                                <li>Ajustar un tiempo de espera (Bloque Naranja 'Wait').</li>
-                                <li>Mover un personaje unos pocos píxeles (arrastrar o bloques de movimiento).</li>
-                                <li>Cambiar un sonido grabado por otro o ajustar volumen (si es posible).</li>
-                                <li>Eliminar bloques redundantes identificados.</li>
-                                <li>Ajustar tamaño ligeramente (bloques Grow/Shrink o editor).</li>
+                                <li>El <strong>Constructor/a</strong> implementa UNO A UNO los ajustes de la lista de pendientes (S10).</li>
+                                <li>El <strong>Diseñador/a</strong> supervisa que el ajuste coincida con lo planeado visualmente.</li>
+                                <li>Mover tarjeta "Corregir Bugs Finales" a "¡Haciendo Ahora!".</li>
                             </ul>
-                             <br>El **Diseñador/a** supervisa que el ajuste coincida con lo planeado visualmente.
-                             <br>Mover tarjeta "Corregir Bugs Finales" a "¡Haciendo Ahora!".
                         </td>
                         <td>
                             "¡Constructores, manos a la obra con la lista de pendientes!"
@@ -219,15 +218,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2 (10 min): Verificación Específica (Probador/a)</strong>
-                            <br>DESPUÉS de que el Constructor/a implementa CADA ajuste, el **Probador/a** verifica ESPECÍFICAMENTE ese cambio:
+                            <strong>Paso 2 (10 min): Verificación Específica (<strong>Probador/a</strong>)</strong>
                             <ul>
-                                <li>¿Se movió el objeto al lugar correcto?</li>
-                                <li>¿Suena el nuevo sonido?</li>
-                                <li>¿El bug de clic rápido ya no ocurre?</li>
+                                <li>DESPUÉS de que el Constructor/a implementa CADA ajuste, el <strong>Probador/a</strong> verifica ESPECÍFICAMENTE ese cambio.</li>
+                                <li>Adicionalmente, verifica brevemente que el ajuste no haya roto nada cercano.</li>
+                                <li>Comunicar inmediatamente si el ajuste funcionó o no.</li>
                             </ul>
-                             <br>Adicionalmente, verifica brevemente que el ajuste no haya roto nada cercano.
-                             <br>Comunicar inmediatamente si el ajuste funcionó o no.
                         </td>
                         <td>
                             "¡Probadores, atención! Cada vez que el Constructor/a diga '¡Listo!' con un ajuste, ¡es su turno!"
@@ -244,10 +240,12 @@
                      <tr>
                         <td>
                             <strong>Paso 3 (5 min): Prueba Funcional Completa Final (Todo el Equipo)</strong>
-                            <br>Una vez corregidos TODOS los puntos de la lista y verificados individualmente, TODO el equipo realiza UNA ÚLTIMA prueba funcional completa.
-                            <br>Juegan la aventura de principio a fin (ambos caminos + sorpresa extra), asegurándose de que todo fluya correctamente.
-                            <br>El **Diseñador/a** da el visto bueno final a la apariencia y flujo.
-                            <br>Mover tarjeta "Verificación Funcional Completa" a "¡Haciendo Ahora!" y luego a "✅ ¡Terminado!". Mover "Corregir Bugs Finales" a "✅ ¡Terminado!".
+                            <ul>
+                                <li>Una vez corregidos TODOS los puntos de la lista y verificados individualmente, TODO el equipo realiza UNA ÚLTIMA prueba funcional completa.</li>
+                                <li>Juegan la aventura de principio a fin (ambos caminos + sorpresa extra), asegurándose de que todo fluya correctamente.</li>
+                                <li>El <strong>Diseñador/a</strong> da el visto bueno final a la apariencia y flujo.</li>
+                                <li>Mover tarjeta "Verificación Funcional Completa" a "¡Haciendo Ahora!" y luego a "✅ ¡Terminado!". Mover "Corregir Bugs Finales" a "✅ ¡Terminado!".</li>
+                            </ul>
                         </td>
                         <td>
                             "¡Equipo, parece que hemos corregido todo en la lista! ¡Ahora la prueba de oro!"
@@ -277,8 +275,10 @@
                     <tr>
                         <td>
                             <strong>Paso 1 (2 min): ¡Prototipo Avanzado Listo!</strong>
-                            <br>Felicitar al equipo por alcanzar la versión final y pulida.
-                            <br>Resaltar el proceso completo desde el diseño hasta la depuración final.
+                            <ul>
+                                <li>Felicitar al equipo por alcanzar la versión final y pulida.</li>
+                                <li>Resaltar el proceso completo desde el diseño hasta la depuración final.</li>
+                            </ul>
                         </td>
                         <td>
                             "¡INCREÍBLE TRABAJO, EQUIPO! ¡Su prototipo avanzado está oficialmente LISTO y funcionando!"
@@ -289,10 +289,12 @@
                     <tr>
                         <td>
                             <strong>Paso 2 (2 min): Guardado Definitivo (¡Fundamental!)</strong>
-                            <br>Guiar EXPLICITAMENTE a los Constructores para realizar el guardado ABSOLUTAMENTE FINAL del proyecto.
-                            <br>Sugerir o asignar un nombre de archivo definitivo y claro (ej. "EquipoAzul_BosqueFeliz_FINAL").
-                            <br>Asegurarse de que TODOS guarden esta versión definitiva.
-                            <br><strong>Proyectar Diapositiva 3</strong> (Icono grande de Guardar + Sello "VERSIÓN FINAL" + Mensaje "¡GUARDA EL PROYECTO DEFINITIVO!").
+                            <ul>
+                                <li>Guiar EXPLICITAMENTE a los Constructores para realizar el guardado ABSOLUTAMENTE FINAL del proyecto.</li>
+                                <li>Sugerir o asignar un nombre de archivo definitivo y claro.</li>
+                                <li>Asegurarse de que TODOS guarden esta versión definitiva.</li>
+                                <li><strong>Proyectar Diapositiva 3</strong>.</li>
+                            </ul>
                         </td>
                         <td>
                             "¡Y ahora, el guardado más importante de todos! ¡El definitivo! ¡La versión que entregaremos!"
@@ -305,8 +307,10 @@
                      <tr>
                         <td>
                             <strong>Paso 3 (1 min): Preparación para Entrega</strong>
-                            <br>Anunciar la Sesión 12: Entrega final del prototipo.
-                            <br>Felicitar una última vez.
+                            <ul>
+                                <li>Anunciar la Sesión 12: Entrega final del prototipo.</li>
+                                <li>Felicitar una última vez.</li>
+                            </ul>
                         </td>
                         <td>
                             "¡Su obra maestra está guardada y lista!"
